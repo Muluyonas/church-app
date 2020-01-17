@@ -1,0 +1,44 @@
+.service-news-container .content{
+  display: grid;
+  grid-auto-flow: column;
+  overflow: hidden;
+}
+
+.service-info{
+  grid-column: 8/9;
+}
+
+.news-blog{
+  grid-column: 1/6;
+}
+
+.news-img > img{
+  width:100%;
+  max-height: 35vh;
+}
+
+.news-container{
+  max-width: 90%;
+}
+
+.service-news-container .news-desc p {
+  text-indent: 3%;
+  margin: 1em 0;
+}
+
+.service-container{
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+}
+
+.service-news-container .service-info .service-desc p {
+  text-indent: 3%;
+  margin: 1em 0;
+}
+
+
+@media only screen and (max-width:1000px){
+
+
+}
+

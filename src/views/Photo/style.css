@@ -1,0 +1,19 @@
+/*Video*/
+
+  .video-photo-container .title{
+    position: relative;
+    grid-column: 1/5;
+    margin: 1em;
+  }
+  
+  .video-photo-container > .title::after{
+    content:'';
+    position: absolute;
+    height:5px;
+    width:15px;
+    background-color: #000;
+  }
+  
+  .video-photo-container .content{
+    width:100%;
+  }

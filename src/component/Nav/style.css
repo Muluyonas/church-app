@@ -1,0 +1,29 @@
+/**NavBar*/
+.navbar-container{
+    margin:10px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .navbar-container > ul{
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap:20px;
+  }
+  
+  
+  .navbar-container > ul > li > a{
+    padding: 10px;
+    color: #222020;
+    text-decoration: none;
+    font-weight: bolder;
+    outline: none;
+  }
+  
+  .navbar-container > ul > li > a:hover{
+    color: #444040;
+  }
+  

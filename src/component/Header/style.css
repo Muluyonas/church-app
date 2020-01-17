@@ -1,0 +1,10 @@
+.header-container {
+    overflow: hidden;
+}
+
+.header-container img {
+    position: relative;
+    display: grid;
+    margin: 10px auto;
+    max-width: 565px;
+}

@@ -1,0 +1,63 @@
+/* Contact */
+
+.contact-container>.title {
+  position: relative;
+  grid-column: 2/5;
+  margin: 1em;
+}
+
+.contact-container>.title::after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 15px;
+  background-color: #000;
+}
+
+
+.contact-container>.content {
+  position: relative;
+  width: 100%;
+}
+
+.content ul {
+  list-style-type: none;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.content ul li {
+  box-shadow: 3px 0 5px #aaaaaa;
+  padding: 10px;
+}
+
+.contact-container .content img {
+  width: 125px;
+  height: 125px;
+  box-shadow: 3px 0px 5px #aaa;
+  border-radius: 8px;
+}
+
+.person {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+}
+
+.info {
+  display: grid;
+  align-items: center;
+  margin: 0 0.5em;
+}
+
+.info-parts p {
+  margin: 0;
+}
+
+.info-parts {
+  margin: 0;
+}
+
+.map{
+  overflow: hidden;
+}
