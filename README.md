@@ -9,3 +9,6 @@ git clone https://github.com/Muluyonas/church-app.git
 npm install
 npm start
 ```
+
+### Se Nettside
+ - http://muluyonas.github.io/church-app
