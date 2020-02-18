@@ -6,6 +6,7 @@ En React baset nettside.
 
 ```
 git clone https://github.com/Muluyonas/church-app.git
+cd church-app
 npm install
 npm start
 ```
