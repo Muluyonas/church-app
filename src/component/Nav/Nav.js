@@ -10,8 +10,8 @@ class Nav extends React.Component {
             <div className="navbar-container">
                 <ul>
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/church-app/service-news">Services & News</Link></li>
-                    <li><Link to="/church-app/video-photo">Video & Photo</Link></li>
+                    <li><Link to="/church-app/service-news">Service & Event</Link></li>
+                    <li><Link to="/church-app/video-photo">Gallery</Link></li>
                     <li><Link to="/church-app/contact">Contact</Link></li>
                 </ul>
             </div>

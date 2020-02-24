@@ -37,8 +37,14 @@
 }
 
 
-@media only screen and (max-width:1000px){
 
+@media only screen and (max-width: 750px) {
+  .service-news-container .content{
+    display: inline-block;
+  }
 
+  .service-container{
+    margin: 0 0 2em 0;
+  }
+  
 }
-
