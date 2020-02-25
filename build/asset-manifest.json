@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/church-app/static/css/main.8b56ecb8.chunk.css",
+    "main.js": "/church-app/static/js/main.80ab91e2.chunk.js",
+    "main.js.map": "/church-app/static/js/main.80ab91e2.chunk.js.map",
+    "runtime~main.js": "/church-app/static/js/runtime~main.14500cb0.js",
+    "runtime~main.js.map": "/church-app/static/js/runtime~main.14500cb0.js.map",
+    "static/css/2.3c1ddb0a.chunk.css": "/church-app/static/css/2.3c1ddb0a.chunk.css",
+    "static/js/2.b89843b0.chunk.js": "/church-app/static/js/2.b89843b0.chunk.js",
+    "static/js/2.b89843b0.chunk.js.map": "/church-app/static/js/2.b89843b0.chunk.js.map",
+    "index.html": "/church-app/index.html",
+    "precache-manifest.d3b7d08613c0d44e4d9806d0e967cfdc.js": "/church-app/precache-manifest.d3b7d08613c0d44e4d9806d0e967cfdc.js",
+    "service-worker.js": "/church-app/service-worker.js",
+    "static/css/2.3c1ddb0a.chunk.css.map": "/church-app/static/css/2.3c1ddb0a.chunk.css.map",
+    "static/css/main.8b56ecb8.chunk.css.map": "/church-app/static/css/main.8b56ecb8.chunk.css.map",
+    "static/media/Urael.jpg": "/church-app/static/media/Urael.d86441ea.jpg",
+    "static/media/logo1.png": "/church-app/static/media/logo1.9adb248e.png"
+  }
+}
