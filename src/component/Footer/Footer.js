@@ -6,7 +6,7 @@ export default class Footer extends Component {
         return (
             <div className="footer-container">
                 <div className="footer-container__left">
-                    <p>@2019 mulu?</p>
+                    <p>Neba 2021?</p>
                 </div>
                 <div className="footer-container__right">
                     <div className="social-media-content">
