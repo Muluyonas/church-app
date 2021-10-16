@@ -1,10 +1,33 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import Pic from "../../assets/placeholder.png";
+import sanityClient from "../../client.js";
+import { formatDate } from "../../utils/dateFormatter";
 
 import "./style.css";
 
-export default class ServiceAndNews extends Component {
-  render() {
+export default function ServiceAndNews() {
+  const [posts, setAllPosts] = useState(null);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "post"]{
+        body,
+        title,
+        slug,
+        mainImage{
+          asset->{_id,url}
+        },
+        publishedAt
+      }`
+      )
+      .then((data) => setAllPosts(data))
+      .catch(console.error);
+  }, []);
+
+  if (!posts) {
+    return <h1>Loading....</h1>;
+  } else {
     return (
       <div className="service-news-container">
         <div className="content">
@@ -19,6 +42,10 @@ export default class ServiceAndNews extends Component {
               <div className="title">
                 <h1>NEWS</h1>
               </div>
+
+              {posts.map((post) => {
+                return <News key={post.title} post={post} />;
+              })}
 
               <News />
               <News />
@@ -58,46 +85,42 @@ function Service() {
   );
 }
 
-function News() {
-  return (
+function News({ post }) {
+  if(post){
+      return (
     <>
       <div className="news-img">
-        <img src={Pic} alt="news-text" />
+       {
+         post.mainImage ? <img src={post.mainImage.asset.url} alt="news-text" /> : 
+         <img src={Pic} alt="some-person" />
+       }
+        
       </div>
 
       <div className="news-text">
         <div className="news-title-date">
-          <h3>Title</h3>
+          <h3>{post ? post.title :'No title'}</h3>
           <p>
-            <small>date(Jan 28,2014)</small>
+            <small>{formatDate(post.publishedAt.slice(0,10))}</small>
           </p>
         </div>
         <div className="news-desc">
-          <p>
-            This is a test text. Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Molestiae, ex. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Voluptas, quam. Veritatis officiis aut
-            adipisci magnam ipsum sed distinctio cumque deleniti alias deserunt
-            iusto, ex ipsa quaerat voluptas accusamus labore quos dolorum
-            praesentium omnis nemo. Quidem sit molestias harum iusto explicabo
-            iste laudantium, odit accusamus quod dolores dolor necessitatibus,
-            quis magnam.
-          </p>
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea
-            voluptas mollitia maiores doloribus impedit, ab explicabo quo
-            possimus minima odio? This is a test text. Lorem ipsum, dolor sit
-            amet consectetur adipisicing elit. Molestiae, ex. Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Voluptas, quam. Veritatis
-            officiis aut adipisci magnam ipsum sed distinctio cumque deleniti
-            alias deserunt iusto, ex ipsa quaerat voluptas accusamus labore quos
-            dolorum praesentium omnis nemo. Quidem sit molestias harum iusto
-            explicabo iste laudantium, odit accusamus quod dolores dolor
-            necessitatibus, quis magnam.
-          </p>
+         {
+           post.body.map(text => {
+             console.log(text.children)
+             return (
+               <p key={text._key}>
+                {text.children[0].text}
+               </p>
+             )
+           } )
+         }
         </div>
       </div>
     </>
   );
+  }else{
+    return <div />;
+  }
+
 }

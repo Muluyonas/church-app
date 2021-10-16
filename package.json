@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://muluyonas.github.io/church-app",
   "dependencies": {
+    "@sanity/client": "^2.21.3",
     "pigeon-maps": "^0.14.0",
     "pigeon-marker": "^0.3.4",
     "react": "^16.12.0",
